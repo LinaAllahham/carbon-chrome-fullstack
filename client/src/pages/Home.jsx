@@ -5,7 +5,7 @@ import styles from './Home.module.css';
 const Home = () => (
   <div className={styles["home-wrapper"]}>
     <img 
-      src="public/images/background-Home.jpg" 
+      src="/images/background-Home.jpg" 
       alt="Background" 
       className={styles["background-img"]}
     />

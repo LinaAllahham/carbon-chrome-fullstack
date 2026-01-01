@@ -233,7 +233,7 @@ const Cart = () => {
         <div className={`${styles.emptyCart} ${purchased ? styles.purchased : ''}`}>
           <div className={styles.towImageContainer}>
             <img 
-              src="public/images/tow-empty-removebg.png" 
+              src="/images/tow-empty-removebg.png" 
               alt="Empty cart" 
               className={styles.towImage}
             />
@@ -256,7 +256,7 @@ const Cart = () => {
                 <div className={styles.carImageContainer}>
                   <div className={styles.carImageWrapper}>
                     <img 
-                      src="public/images/tow-empty-removebg.png" 
+                      src="/images/tow-empty-removebg.png" 
                       alt="Cart" 
                       className={styles.towBackground}
                     />
