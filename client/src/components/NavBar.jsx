@@ -37,7 +37,7 @@ const NavBar = () => {
     <div className={`${styles.navContainer} ${!visible ? styles.hidden : ''}`}>
       <nav className={styles.nav}>
         <img 
-          src="public/images/project-icon-removebg.png" 
+          src="/images/project-icon-removebg.png" 
           alt="Project Icon" 
           className={styles["nav-icon"]}
           onClick={() => dispatch(setPage('home'))}
@@ -78,7 +78,7 @@ const NavBar = () => {
         >
           <div className={styles.cartIconContainer}>
             <img
-              src={totalItems > 0 ? "public/images/tow-car-removebg.png" : "public/images/tow-empty-removebg.png"}
+              src={totalItems > 0 ? "/images/tow-car-removebg.png" : "/images/tow-empty-removebg.png"}
               alt="Cart"
               className={styles.cartIcon}
             />
