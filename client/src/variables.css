@@ -1,0 +1,86 @@
+:root {
+  /** Layouts **/
+  --layout-mobile: 375px;
+  --layout-desktop: 1440px;
+
+  /** Colours **/
+  --clr-orange: hsl(25, 97%, 53%);
+  --clr-bright-red: #ff4757;
+  --clr-soft-red: #e74c3c;
+  --clr-deep-red: #c0392b;
+  --clr-soft-red-transparent: rgba(231, 76, 60, 0.9);
+
+
+
+  --clr-dark-blue: #0c1318;
+  --clr-light-blue-opacity: #829ebb5f;
+  --clr-dark-slate-blue: #2c3e50;
+  --clr-slate-blue: #34495e;
+  --clr-sky-blue: #3498db;
+  --clr-strong-blue: #2980b9;
+  --clr-deep-blue: #1a5276;
+  --clr-gray-blue: #95a5a6;
+
+  --clr-light-gray: #cccccc;
+  --clr-white: #ffffff;
+  --clr-light-grayish: #eee;
+  --clr-white-transparent: rgba(255,255,255,0.9);
+  --clr-white-overlay: rgba(255, 255, 255, 0.3);
+  --clr-light-silver: #ddd;
+
+  --clr-very-dark-gray: #121212;
+  --clr-medium-gray: #888;
+
+  --clr-soft-gray: rgb(208, 203, 203);
+  --clr-desaturated-teal: #7f8c8d;
+  --clr-charcoal: #333;
+
+  --clr-emerald-green: #27ae60;
+  --clr-forest-green: #219653;
+
+
+
+  --clr-black-transparent: rgba(0, 0, 0, 0.7);
+  --clr-black-overlay-80: rgba(0,0,0,0.8);
+  --clr-black-overlay: rgba(0, 0, 0, 0.9);
+
+
+
+
+  /** 
+   The above was added as an example, please add more colours! 
+   Feel free to set your own desired fonts, font-weights, and font-family! 
+   You can use the Assignment starters we've given you for React as an example!
+  
+  **/
+
+  /** Typography **/
+  --font-paragraph: 16px; 
+
+  --fw-regular: 200;
+  --fw-bold: 500;
+
+  --ff-base: 'Ethnocentric',sans-serif;
+  
+  
+  --font-ubuntu: 'Ubuntu', sans-serif;
+
+  
+
+}
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('../public/fonts/ethnocentric-rg.ttf') format('truetype');
+  font-weight: var(--fw-regular); /* or 400 */
+  font-style: normal;
+  font-display: swap; /* Optional: avoids invisible text while loading */
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

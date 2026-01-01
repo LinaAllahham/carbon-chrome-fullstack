@@ -1,0 +1,407 @@
+.cartContainer {
+  
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--clr-charcoal);
+  background: var(--clr-soft-gray);
+  min-height: 78vh;
+  margin-top: 113px;
+}
+
+.cartTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: var(--clr-dark-slate-blue);
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+
+
+
+}
+
+.emptyCart.purchased {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.towImageContainer {
+ width: 100%;
+  max-width: 600px; /* Image container max size */
+  height: auto;
+  
+}
+
+.towImage {
+  
+border-radius: 10px;
+
+
+  
+  width: 500%; /* Makes image fill its container */
+  max-height: 212px; /* Maintains aspect ratio */
+
+}
+
+.emptyCart .towImage {
+  opacity: 0.4;
+  height: 15rem;
+  width: 60rem;
+}
+
+.emptyCart.purchased .towImage {
+  width: 120%;
+  height: 120%;
+  transition: all 0.5s ease;
+}
+
+.purchasedCarImage {
+  position: relative;
+  /* top: 44%;
+  left: 54%;
+  transform: translate(-50%, -50%); */
+  margin-top: -230px;
+  margin-left: 240px;
+  max-width: 250px;
+  height: 158px;
+  z-index: 2;
+}
+
+.purchasedCarImage img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+}
+
+.emptyCart p {
+  font-size: 1.2rem;
+  color: var(--clr-desaturated-teal);
+  margin-top: 7rem;
+}
+
+.emptyCart.purchased p {
+  color: var(--clr-emerald-green);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.emptyCart.purchased .towImage {
+  opacity: 1;
+}
+
+.cartContent {
+  display: flex;
+  gap: 2rem;
+}
+
+.cartItems {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cartItem {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.carImageContainer {
+  
+  width: 280px;
+}
+
+.carImageWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.towBackground {
+ 
+  opacity: 0.6;
+  margin-top: 2rem;
+}
+
+.carImage {
+  position: absolute;
+  height: 90%;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-22%, -83%);
+  
+}
+
+.carDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carDetails h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--clr-dark-slate-blue);
+}
+
+.carPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--clr-emerald-green);
+  margin: 0.5rem 0;
+}
+
+.carQuantity {
+  margin: 0.5rem 0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.removeButton {
+  padding: 0.5rem 1rem;
+  background: var(--clr-soft-red);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  background: var(--clr-deep-red);
+}
+
+.removeAllButton {
+  padding: 0.5rem 1rem;
+  background: var(--clr-gray-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.removeAllButton:hover {
+  background: var(--clr-desaturated-teal);
+}
+
+.cartSummary {
+  flex: 1;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-light-grayish);
+}
+
+.summaryRow:last-child {
+  border-bottom: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.purchaseButton {
+  width: 100%;
+  padding: 1rem;
+  background: var(--clr-emerald-green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.purchaseButton:hover {
+  background: var(--clr-forest-green);
+
+}
+
+
+
+
+
+
+/* Cart Header */
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 5rem;
+}
+
+/* Clear All Button */
+.clearAllButton {
+  background: var(--clr-soft-red);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.clearAllButton:hover {
+   background: var(--clr-deep-red);
+}
+
+/* Mobile Clear Button (same button, different styling) */
+.clearAllButtonMobile {
+  display: none; /* Hidden by default */
+}
+
+/* Summary Actions */
+.summaryActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.processingNote {
+  margin-top: 25px;
+}
+
+
+
+
+@media (max-width: 435px) {
+  .cartContainer {
+    padding: 1rem;
+    margin-top: 84px;
+    min-height: 83vh;
+  }
+  
+  .cartTitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    margin-top: 5rem;
+  }
+
+  .cartContent {
+    flex-direction: column;
+  }
+
+  .cartSummary {
+    order: 1;
+  }
+  
+  .cartItems {
+    order: 2;
+  }
+
+  .cartItem {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .carImageContainer {
+    width: 100%;
+  }
+  
+  .towImage {
+    width: 100%;
+    max-height: 104px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .removeButton, .removeAllButton {
+    width: 100%;
+  }
+
+  .purchasedCarImage {
+    width: 140px;
+    height: 90px;
+    margin-left: 31vw;
+    margin-top: -130px;
+  }
+
+
+
+/* Cart Header */
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Clear All Button */
+.clearAllButton {
+  background: var(--clr-soft-red);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.clearAllButton:hover {
+  background: var(--clr-deep-red);
+}
+
+@media (max-width: 480px) {
+  .cartHeader {
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .clearAllButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    order: 2; /* Move button below title */
+    width: 100%;
+  }
+
+  .cartTitle {
+    order: 1; /* Keep title on top */
+  }
+}
+}
