@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Get all cars with optional filters
 export const getCars = async (filters = {}) => {
@@ -11,7 +11,7 @@ export const getCars = async (filters = {}) => {
     if (sort) params.append('sort', sort);
     
     const queryString = params.toString();
-    const url = queryString ? `${API_URL}/cars?${queryString}` : `${API_URL}/cars`;
+    const url = queryString ? `${API_URL}cars?${queryString}` : `${API_URL}cars`;
     
     const response = await fetch(url);
     if (!response.ok) throw new Error('Failed to fetch cars');
@@ -25,7 +25,7 @@ export const getCars = async (filters = {}) => {
 // Get filter options
 export const getFilterOptions = async () => {
   try {
-    const response = await fetch(`${API_URL}/cars/filters`);
+    const response = await fetch(`${API_URL}cars/filters`);
     if (!response.ok) throw new Error('Failed to fetch filter options');
     return await response.json();
   } catch (error) {
@@ -37,7 +37,7 @@ export const getFilterOptions = async () => {
 // Process purchase
 export const processPurchase = async (cartItems) => {
   try {
-    const response = await fetch(`${API_URL}/purchases`, {
+    const response = await fetch(`${API_URL}purchases`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export const processPurchase = async (cartItems) => {
 // Update car stock
 export const updateCarStock = async (carId, newStock) => {
   try {
-    const response = await fetch(`${API_URL}/cars/${carId}/stock`, {
+    const response = await fetch(`${API_URL}cars/${carId}/stock`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
