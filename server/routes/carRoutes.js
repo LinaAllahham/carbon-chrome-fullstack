@@ -19,4 +19,30 @@ router.get('/:id', getCarById);
 // PATCH /api/cars/:id/stock - Update car stock
 router.patch('/:id/stock', updateCarStock);
 
+// POST /api/cars - Add new car
+router.post('/', async (req, res) => {
+  try {
+    const Car = require('../models/car');
+    const car = new Car(req.body);
+    await car.save();
+    res.status(201).json(car);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// DELETE /api/cars/:id - Delete car by numeric ID
+router.delete('/:id', async (req, res) => {
+  try {
+    const Car = require('../models/car');
+    const car = await Car.findOneAndDelete({ id: parseInt(req.params.id) });
+    if (!car) {
+      return res.status(404).json({ error: 'Car not found' });
+    }
+    res.json({ message: 'Car deleted successfully', deletedCar: car });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
