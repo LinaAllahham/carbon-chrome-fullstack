@@ -49,7 +49,7 @@ router.delete('/:id', async (req, res) => {
 // PUT /api/cars/:id - Update entire car
 router.put('/:id', async (req, res) => {
   try {
-    const Car = require('../models/Car');
+    const Car = require('../models/car');
     const car = await Car.findOneAndUpdate(
       { id: parseInt(req.params.id) },
       req.body,
