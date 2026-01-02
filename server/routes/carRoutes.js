@@ -45,4 +45,25 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+
+// PUT /api/cars/:id - Update entire car
+router.put('/:id', async (req, res) => {
+  try {
+    const Car = require('../models/Car');
+    const car = await Car.findOneAndUpdate(
+      { id: parseInt(req.params.id) },
+      req.body,
+      { new: true, runValidators: true }
+    );
+    
+    if (!car) {
+      return res.status(404).json({ error: 'Car not found' });
+    }
+    
+    res.json(car);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
 module.exports = router;
