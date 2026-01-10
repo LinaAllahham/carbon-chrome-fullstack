@@ -2,36 +2,6 @@
 
 
 
-// import { createSlice } from '@reduxjs/toolkit';
-// import carData from '../data.json';
-
-// const inventorySlice = createSlice({
-//   name: 'inventory',
-//   initialState: carData,
-//   reducers: {
-//     decrementCar: (state, action) => {
-//       const car = state.find(c => c.id === action.payload.id);
-//       if (car) {
-//         car.stock -= action.payload.quantity || 1;
-//         // Ensure stock doesn't go negative
-//         if (car.stock < 0) car.stock = 0;
-//       }
-//     },
-//     incrementCar: (state, action) => {
-//       const car = state.find(c => c.id === action.payload.id);
-//       if (car) {
-//         car.stock += action.payload.quantity || 1;
-//       }
-//     }
-//   }
-// });
-
-// export const { decrementCar, incrementCar } = inventorySlice.actions;
-// export default inventorySlice.reducer;
-
-
-
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getCars, updateCarStock } from '../services/api';
 
